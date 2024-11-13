@@ -8,31 +8,35 @@
 
 \typeout{NT FILE chapter2.tex}%
 
-\chapter{Literature Review}
+\chapter{State Of the Art}
 \label{cha:users_manual}
 
 
 \section{Introduction}
-
 \label{sec:introduction}
 
-	In the paper "An Artificial Intelligence Framework on Software Bug Triaging" \cite{r1} is presented a comprehensive review of Artificial Intelligence (AI) techniques used for software bug triaging (SBT). The aim of the paper is to analyse which which AI-based method is more efficient in SBT. In the paper are evaluated 6 AI-based techniques that were mostly used in 123 studies: machine learning, information retrieval, social network analysis, recommender systems, mathematical modelling and optimisation, and deep learning. The findings of the paper indicate that:
+
+	In the paper "An Artificial Intelligence Framework on Software Bug Triaging" \cite{Nagwani2023} is presented a comprehensive review of Artificial Intelligence (AI) techniques used for Software Bug Triaging (SBT). The aim of the paper is to analyse which AI-based method is more efficient in SBT. In the paper are evaluated 6 AI-based techniques that were mostly used in 123 studies: machine learning, information retrieval, social network analysis, recommender systems, mathematical modelling and optimisation, and deep learning. The findings of the paper indicate that:
 	\begin{itemize}
-		\item The Machine Learning and Information Retrieval techniques are widely applied in early SBT methods and still are important for classification and bug text analysis.
+		\item The Machine Learning and Information Retrieval techniques are widely applied in early SBT methods and still are important for classification and bug report's text analysis.
 		\item The Deep Learning Approaches especially those using word embeddings like Word2Vec and Glove offer a better accuracy. 
-		\item Top-10 accuracy of 86\% was achieved using Deep Learning Models with Word2Vec and Glvove embeddings across various repositories (e.g., Eclipse, Mozilla, and Gento). 
+		\item Top-10 accuracy of 86\% was achieved using Deep Learning Models with Word2Vec and Glove embeddings across various repositories (e.g., Eclipse, Mozilla, and Gento). 
 	\end{itemize}
+	
+	
+		In the paper "An empirical Assessment of Different Word Embedding and Deep Learning Models for Bug Assignment" (here should be the citation), the authors tested the effectiveness from combination of various word embeddings and deep learning models for the SBT. For word embeddings were selected from: Word2Vec, Glove, NextBug, ELMo, and BERT. For deep learning classifiers were selected: Text-CNN, LSTM, Bi-LSTM, LSTM with attention, Bi-LSTM with attention, MLP, and Native Bayes. As a result of the study from the 35 possible combinations the most successful combination was Bi-LSTM with attention combined with ELMo embeddings that had the best performance when referring to top-k accuracy measurements. For that combination was possible to achieve 46\% for Eclipse JDT and 28\% on Mozilla for Top-1 accuracy. For top-5 accuracy was obtained 78\% on Eclipse and 68\% on Mozilla. 
  
 
 	In the paper "Automatic Bug Triaging via Deep Reinforcement Learning" (Here should be the citation), authors propose a novel technique of SBT using deep reinforcement learning (BT-RL). 
 	This approach uses:
-	- Deep Multi-Sematic Feature (DMSF)fusion model that uses Recurrent Neural Network (RNN) to extract only the relevant information from the bug report.
-	- Online Dynamic Matching (ODM) model, that by using reinforcement learning, this component learns form historical data of bug fixes and form developer activities. It matches the new bug reports with developers based on a probabilistic model, allowing to assign developers in a more dynamic way as it learns.
+	\begin{itemize}
+		\item Deep Multi-Semantic Feature (DMSF)fusion model that uses Recurrent Neural Network (RNN) to extract only the relevant information from the bug report.
+		\item On-line Dynamic Matching (ODM) model, that by using reinforcement learning, this component learns form historical data of bug fixes and form developer activities. It matches the new bug reports with developers based on a probabilistic model, allowing to assign developers in a more dynamic way as it learns.
+	\end{itemize}
 	The paper used data sets form: NetBeans, Mozilla, Eclipse and OpenOffice. The highest Top-k accuracy that was achieved was for the Eclipse data set with a value of 78\% for Top-5 and 46\% for Top-1.
+
 	
-	In the paper "An empirical Assessment of Different Word Embedding and Deep Learning Models for Bug Assignment" (here should be the citation), the authors tested the effectiveness from combination of various word embeddings and deep learning models for the SBT. For word embeddings were selected from: Word2Vec, GloVe, NextBug, EKMo, and BERT. For deep learning classifiers were choosed: TextCNN, LSTM, Bi-LSTM, LSTM with attention, Bi-LSTM with attention, MLP, and Native Bayes. As a result of the study from the 35 possible combinations the most successful combination was Bi-LSTM with attention combined with ELMo embeddings that had the best performance when referring to top-k accuracy measurements. For that combination was possible to achieve 46\% for Eclipse JDT and 28\% on Mozilla for Top-1 accuracy. For top-5 accuracy was obtained 78\% on Eclipse and 68\% on Mozilla. 
-	
-	In the paper "Applying Convolutional Neural Networks With Different Word Representation Techniques to Recommend Bug Fixers" (some citations) the authors propose a deep learning-based bug triage technique using a convolutional neural network (CNN) with three different word representation techniques: Word to Vector (Word2Vec ), Global Vector (GloVe), and Embeddings from Language Models (ELMo). 
+	In the paper "Applying Convolutional Neural Networks With Different Word Representation Techniques to Recommend Bug Fixers" () the authors propose a deep learning-based bug triage technique using a convolutional neural network (CNN) with three different word representation techniques: Word to Vector (Word2Vec ), Global Vector (GloVe), and Embeddings from Language Models (ELMo). 
 
 
 \section{Quick Start}
