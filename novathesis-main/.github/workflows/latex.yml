@@ -1,0 +1,33 @@
+name: Compile LaTeX Document and Deploy PDF
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Set up LaTeX Environment
+      uses: dante-ev/latex-action@v2
+      with:
+        root_file: template.tex # Replace 'main.tex' with your entry point
+
+    - name: Move PDF to GitHub Pages Directory
+      run: |
+        mkdir -p public
+        mv template.pdf public/ # Ensure 'main.pdf' matches your output file name
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./public
